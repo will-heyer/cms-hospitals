@@ -1,0 +1,85 @@
+=== First run ===
+75 hospital datasets, 75 new or modified
+OK     Complications and Deaths - National
+OK     Outpatient and Ambulatory Surgery Consumer Assessment of Healthcare Providers and Systems (OAS CAHPS) survey for ambulatory surgical centers - State
+OK     Outpatient and Ambulatory Surgery Consumer Assessment of Healthcare Providers and Systems (OAS CAHPS) survey for ambulatory surgical centers - National
+OK     Comprehensive Care For Joint Replacement Model - Provider Data
+OK     Ambulatory Surgical Center Quality Measures - State
+OK     Ambulatory Surgical Center Quality Measures - National
+OK     Complications and Deaths - State
+OK     Footnote Crosswalk
+OK     Table 3: FY2024 Percent Change in Medicare Payments
+OK     Table 2: FY2024 Distribution of Net Change in Base Operating DRG Payment Amount
+OK     Table 1: FY2024 Net Change in Base Operating DRG Payment Amount
+OK     Table 4: FY2024 Value-Based Incentive Payment Amount
+OK     Outpatient and Ambulatory Surgery Consumer Assessment of Healthcare Providers and Systems (OAS CAHPS) survey for ambulatory surgical centers - Facility
+OK     Ambulatory Surgical Center Quality Measures - Facility
+OK     Patient survey (HCAHPS) - National
+OK     CMS Medicare PSI-90 and component measures - six-digit estimate dataset
+OK     Healthcare Associated Infections - National
+OK     Healthcare Associated Infections - State
+OK     Outpatient and Ambulatory Surgery Consumer Assessment of Healthcare Providers and Systems (OAS CAHPS) survey for hospital outpatient departments - National
+OK     Patient survey (HCAHPS) - State
+OK     Outpatient and Ambulatory Surgery Consumer Assessment of Healthcare Providers and Systems (OAS CAHPS) survey for hospital outpatient departments - State
+OK     Complications and Unplanned Hospital Visits - PPS-Exempt Cancer Hospital - National
+OK     Complications and Unplanned Hospital Visits - PPS-Exempt Cancer Hospital - Hospital
+OK     Medicare Spending Per Beneficiary - Hospital Additional Decimal Places
+OK     Safety and Healthcare-Associated Infection Measures - PPS-Exempt Cancer Hospital
+OK     Patient Survey (PCH - HCAHPS) PPS-Exempt Cancer Hospital - National
+OK     Patient Survey (PCH - HCAHPS) PPS-Exempt Cancer Hospital - Hospital
+OK     Hospital-Acquired Condition (HAC) Reduction Program
+OK     Hospital General Information
+OK     Patient Survey (PCH - HCAHPS) PPS-Exempt Cancer Hospital - State
+OK     Complications and Deaths - Hospital
+OK     Hospital Value-Based Purchasing (HVBP) - Efficiency Scores
+OK     Hospital Value-Based Purchasing (HVBP) - Total Performance Score
+OK     Hospital Value-Based Purchasing (HVBP) - Clinical Outcomes Domain Scores
+OK     Inpatient Psychiatric Facility Quality Measure Data - National
+OK     Hospital Value-Based Purchasing (HVBP) - Safety
+OK     Hospital Value-Based Purchasing (HVBP) - Person and Community Engagement Domain Scores (HCAHPS)
+OK     Inpatient Psychiatric Facility Quality Measure Data - by State
+OK     Measure Dates
+OK     Inpatient Psychiatric Facility Quality Measure Data - by Facility
+OK     Hospital Readmissions Reduction Program
+OK     Medicare Spending Per Beneficiary - National
+OK     Medicare Spending Per Beneficiary - State
+OK     Outpatient Imaging Efficiency - State
+OK     Outpatient Imaging Efficiency - National
+OK     Timely and Effective Care - National
+OK     Medicare Spending Per Beneficiary - Hospital
+OK     Timely and Effective Care - State
+OK     Outpatient Imaging Efficiency - Hospital
+OK     Unplanned Hospital Visits - National
+OK     Unplanned Hospital Visits - State
+OK     Veterans Health Administration Behavioral Health Data
+OK     Veterans Health Administration Provider Level Data
+OK     Data Updates
+OK     Veterans Health Administration Timely and Effective Care Data
+OK     Outpatient and Ambulatory Surgery Consumer Assessment of Healthcare Providers and Systems (OAS CAHPS) survey for hospital outpatient departments - Facility
+OK     Palliative Care - PPS-Exempt Cancer Hospital - National
+OK     Palliative Care - PPS-Exempt Cancer Hospital - Hospital
+OK     Healthcare Associated Infections - Hospital
+OK     Rural Emergency Hospital Timely and Effective Care - Hospital
+OK     Birthing Friendly Hospitals with Geocoded Addresses
+OK     Patient-Reported Outcomes - Hospital
+OK     Promoting Interoperability - Hospital
+OK     Rural Emergency Hospital Timely and Effective Care - National
+OK     Rural Emergency Hospital Outpatient Imaging Efficiency - Hospital
+OK     Rural Emergency Hospital Outpatient Imaging Efficiency - National
+OK     Rural Emergency Hospital Unplanned Hospital Visits - National
+OK     Medicare Hospital Spending by Claim
+OK     Maternal Health - Hospital
+OK     Rural Emergency Hospital Unplanned Hospital Visits - Hospital
+OK     Patient Engagement PPS-Exempt Cancer Hospital - National
+OK     Patient Engagement PPS-Exempt Cancer Hospital - Hospital
+OK     Unplanned Hospital Visits - Hospital
+OK     Timely and Effective Care - Hospital
+OK     Patient survey (HCAHPS) - Hospital
+
+=== Second run (nothing changed) ===
+75 hospital datasets, 0 new or modified
+
+=== Sample converted file: data/48nr-hqxx.csv (first 3 lines) ===
+facility_id,facility_name,address,city_town,state,zip_code,county_parish,telephone_number,patients_who_reported_that_staff_definitely_gave_care_in_a_professional_way_and_the_facility_was_clean,patients_who_reported_that_staff_somewhat_gave_care_in_a_professional_way_or_the_facility_was_somewhat_clean,patients_who_reported_that_staff_did_not_give_care_in_a_professional_way_or_the_facility_was_not_clean,facilities_and_staff_linear_mean_score,patients_who_reported_that_staff_definitely_communicated_about_what_to_expect_during_and_after_the_procedure,patients_who_reported_that_staff_somewhat_communicated_about_what_to_expect_during_and_after_the_procedure,patients_who_reported_that_staff_did_not_communicate_about_what_to_expect_during_and_after_the_procedure,communication_about_your_procedure_linear_mean_score,patients_who_gave_the_facility_a_rating_of_9_or_10_on_a_scale_from_0_lowest_to_10_highest,patients_who_gave_the_facility_a_rating_of_7_or_8_on_a_scale_from_0_lowest_to_10_highest,patients_who_gave_the_facility_a_rating_of_0_to_6_on_a_scale_from_0_lowest_to_10_highest,patients_rating_of_the_facility_linear_mean_score,patients_who_reported_yes_they_would_definitely_recommend_the_facility_to_family_or_friends,patients_who_reported_probably_yes_they_would_recommend_the_facility_to_family_or_friends,patients_who_reported_no_they_would_not_recommend_the_facility_to_family_or_friends,patients_recommending_the_facility_linear_mean_score,footnote,number_of_sampled_patients,number_of_completed_surveys,survey_response_rate_percent,start_date,end_date
+01C0001000,MONTGOMERY SURGICAL CENTER,470 TAYLOR RD SUITE 100,MONTGOMERY,AL,36117,,(334) 747-9666,97,3,0,99,90,8,2,94,86,12,2,95,92,7,1,97,3,559,125,23,10/01/2024,09/30/2025
+01C0001002,MOBILE SC LTD DBA MOBILE SURGERY CENTER,6144 AIRPORT BLVD SUITE A,MOBILE,AL,36608,,(251) 438-3614,99,1,0,100,96,4,0,98,92,7,1,97,94,5,1,97,3,818,217,27,10/01/2024,09/30/2025
