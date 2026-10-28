@@ -13,6 +13,8 @@ pip install -r requirements.txt
 python main.py
 ```
 
+Use `--workers N` to change the number of parallel downloads (default 10). The script exits with code 1 if any dataset fails, so a scheduler can flag the run.
+
 ## Schedule daily
 
 - **Linux (cron):** `0 6 * * * cd /path/to/cms && python main.py`
@@ -21,7 +23,7 @@ python main.py
 
 1. Fetches the CMS metastore catalog and keeps datasets whose theme includes "Hospitals".
 2. Compares each dataset's modified date with state.json from the previous run, keeping only new or changed datasets.
-3. Downloads and processes those CSVs in parallel with a thread pool, rewriting the header row to snake_case.
+3. Downloads and processes those CSVs in parallel with a thread pool, rewriting the header row to snake_case. Each thread reuses one HTTP session, so repeat downloads skip connection setup.
 4. Records each successful dataset's modified date, plus the run time, in state.json.
 
 ## Design notes
