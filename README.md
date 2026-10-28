@@ -23,7 +23,7 @@ Use `--workers N` to change the number of parallel downloads (default 10). The s
 
 1. Fetches the CMS metastore catalog and keeps datasets whose theme includes "Hospitals".
 2. Compares each dataset's modified date with state.json from the previous run, keeping only new or changed datasets.
-3. Downloads and processes those CSVs in parallel with a thread pool, rewriting the header row to snake_case. Each thread reuses one HTTP session, so repeat downloads skip connection setup.
+3. Streams those CSVs to disk in parallel with a thread pool, rewriting the header row to snake_case and copying the data rows through unchanged. Each file is written to a temporary file first and renamed when complete, so a failed download never replaces a good file. Each thread reuses one HTTP session, so repeat downloads skip connection setup.
 4. Records each successful dataset's modified date, plus the run time, in state.json.
 
 ## Design notes
@@ -36,4 +36,3 @@ Use `--workers N` to change the number of parallel downloads (default 10). The s
 ## Known limitations
 
 - CMS modified values are dates without times, so two updates on the same day look like one.
-- Each CSV is processed in memory, which is fine for these file sizes.

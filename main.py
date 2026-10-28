@@ -1,8 +1,8 @@
 import argparse
 import csv
-import io
 import json
 import re
+import shutil
 import sys
 import threading
 from concurrent.futures import ThreadPoolExecutor
@@ -32,20 +32,28 @@ def get_session():
 
 
 def process_dataset(dataset):
-    """Download one CSV and save it with snake_case headers. Return True on success."""
+    """Stream one CSV to disk with snake_case headers. Return True on success.
+
+    Only the header row is parsed; the data rows are copied through as raw bytes.
+    """
+    path = data_dir / f"{dataset['identifier']}.csv"
+    temp_path = path.with_suffix(".tmp")
     try:
         url = dataset["distribution"][0]["downloadURL"]
-        response = get_session().get(url, timeout=300)
-        response.raise_for_status()
-        rows = csv.reader(io.StringIO(response.content.decode("utf-8-sig")))
-        header = next(rows)
-        with open(data_dir / f"{dataset['identifier']}.csv", "w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow([to_snake_case(column) for column in header])
-            writer.writerows(rows)
+        with get_session().get(url, stream=True, timeout=300) as response:
+            response.raise_for_status()
+            response.raw.decode_content = True
+            header_line = response.raw.readline()
+            header = next(csv.reader([header_line.decode("utf-8-sig")]))
+            line_ending = b"\r\n" if header_line.endswith(b"\r\n") else b"\n"
+            with open(temp_path, "wb") as f:
+                f.write(",".join(to_snake_case(column) for column in header).encode() + line_ending)
+                shutil.copyfileobj(response.raw, f)
+        temp_path.replace(path)
         print("OK    ", dataset["title"])
         return True
     except Exception as error:
+        temp_path.unlink(missing_ok=True)
         print("FAILED", dataset["title"], error)
         return False
 
